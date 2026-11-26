@@ -65,10 +65,10 @@ CATEGORIES = [
 PEOPLE_LABEL = {
     "论文发表": "作者",
     "软著": "开发者",
-    "竞赛国赛": "成员",
-    "竞赛省赛": "成员",
-    "竞赛校赛": "成员",
-    "其他证书": "成员",
+    "竞赛国赛": "获得者",
+    "竞赛省赛": "获得者",
+    "竞赛校赛": "获得者",
+    "其他证书": "获得者",
 }
 
 
@@ -100,7 +100,7 @@ def prepare(honors):
     result = []
     for h in honors:
         people = h.get("people") or []
-        label = PEOPLE_LABEL.get(h.get("category"), "成员")
+        label = PEOPLE_LABEL.get(h.get("category"), "获得者")
         result.append({
             "category": h["category"],
             "title": h["title"],
